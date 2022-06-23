@@ -1,21 +1,6 @@
-// Hello! Can you see this?
+const test = document.getElementById("test")
 
-//new comment by hubert
-const variable = 2;
-console.log(variable);
-
-const writeComment = (comment) => {
-    return `Comment: ${comment}`;
-};
-
-
-
-// Here is another commit!!!!
-
-
-
-
-
-
-// New comment on line 20
+test.addEventListener("click", () => {
+    test.style.color = "red"
+})
 
