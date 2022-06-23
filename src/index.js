@@ -4,9 +4,8 @@
 const variable = 2;
 console.log(variable);
 
-
 const writeComment = (comment) => {
-    return `Comment: ${comment}`
-}
+    return `Comment: ${comment}`;
+};
 
-console.log(writeComment("Hello"))
+console.log(writeComment('Hello'));
