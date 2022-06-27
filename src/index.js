@@ -1,6 +1,5 @@
-const test = document.getElementById("test")
+// const test = document.getElementById('test');
 
-test.addEventListener("click", () => {
-    test.style.color = "red"
-})
-
+// test.addEventListener('click', () => {
+//     test.style.color = 'red';
+// });
