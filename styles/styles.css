@@ -43,6 +43,18 @@ h6 {
 
 /*  */
 
+:root {
+    --clr-primary: #fceb44;
+    --clr-secondary: #252624;
+    --clr-accent: #d74e2d;
+}
+
+.dark-mode {
+    --clr-primary: #133646;
+    --clr-secondary: #d74e2d;
+    --clr-accent: #fceb44;
+}
+
 .container {
     max-width: 66rem;
     margin: 0 auto;
@@ -73,15 +85,15 @@ h6 {
     width: 300px;
 }
 
-.products{
+.products {
     display: flex;
     column-gap: 1rem;
     padding: 1rem;
 }
 
-.card{
+.card {
     padding: 1rem;
-    background-color: #FFF16C;
+    background-color: #fff16c;
 }
 
 .card img {
