@@ -1,12 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+#root,
+#__next {
+    isolation: isolate;
 }
 
-body{
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+/*  */
+
+.container {
+    max-width: 66rem;
+    margin: 0 auto;
+}
+
+.header {
+    padding-block: 20px;
+    background-color: rgba(255, 230, 0, 0.576);
+}
+
+.header__logo {
+    font-size: 2rem;
+}
+
+.nav__list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav__list-item a {
+    text-decoration: none;
+}
+
+#duckSearch {
+    width: 300px;
 }
 
 .products{
