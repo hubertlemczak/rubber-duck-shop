@@ -2,6 +2,7 @@ const products = document.getElementById("products")
 const sortBtn = document.getElementById("sortBtn")
 
 const renderProducts = (productList) => {
+    products.innerHTML = ""
     productList.map((product) => {
         const card = document.createElement("div")
         const star = "⭐"
@@ -19,16 +20,15 @@ const renderProducts = (productList) => {
 renderProducts(data)
 
 const sortByPrice = () => {
-    products.innerHTML = ""
     const sortedByPrice = []
 
-    data.map(duck => [+duck.price.slice(1), duck.id])
+    data.map((duck) => [+duck.price.slice(1), duck.id])
         .sort((a, b) => a[0] - b[0])
-        .map(priceDuck => {
-            data.map(dataDuck => {
+        .map((priceDuck) => {
+            data.map((dataDuck) => {
                 if (dataDuck.id === priceDuck[1]) sortedByPrice.push(dataDuck)
             })
-    })
+        })
 
     renderProducts(sortedByPrice)
 }
