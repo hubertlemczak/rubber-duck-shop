@@ -6,10 +6,12 @@ const renderProducts = (productList) => {
     products.innerHTML = ""
     productList.map((product) => {
         const card = document.createElement("div")
+        card.classList.add("card")
         const star = "⭐"
         card.innerHTML = `
-            <div class="card">
-                <img src=${product.src} alt=${product.name} />
+                <div class="card__img">
+                    <img src=${product.src} alt=${product.name} />
+                </div>
                 <h3>${product.name}</h3>
                 <p>${star.repeat(product.rating)}</p>
                 <p>${product.price}</p>
@@ -19,7 +21,6 @@ const renderProducts = (productList) => {
 }
 
 renderProducts(data)
-
 
 const sortByPrice = (highOrLow) => {
     const sortedByPrice = []
