@@ -1,5 +1,13 @@
 const data = [
     {
+        id: "boolean",
+        name: "Boolean UK Rubber Duck",
+        src: "./img/boolean-duck.jpg",
+        price: "£15.99",
+        rating: 5,
+        about: "Your classic debugging companion."
+    },
+    {
         id: "skyrim",
         name: "Skyrim Rubber Duck",
         src: "./img/skyrim-duck.jpg",
@@ -8,12 +16,12 @@ const data = [
         about: "The Last Dragonborn has the soul of a dragon, and the body of a duck! Traverse the world and explore the mountains, fields, and villages of Skyrim with the Elder Scrolls range of TUBBZ, the collectable duck figurines."
     },
     {
-        id: "action",
-        name: "Action Man Rubber Duck",
-        src: "./img/action-man-duck.jpg",
+        id: "diving",
+        name: "Diving Rubber Duck",
+        src: "./img/diving-duck.jpg",
         price: "£7.49",
         rating: 3.6,
-        about: "Action Man Rubber Duck - Rubber Ducky Bath Toy - Officially Licensed Limited Edition Merchandise."
+        about: "Diving Rubber Duck - Rubber Ducky Bath Toy - Officially Licensed Limited Edition Merchandise."
     },
     {
         id: "lizzie",
@@ -118,14 +126,6 @@ const data = [
         price: "£11.69",
         rating: 3.5,
         about: "With a light squeaker - does not float upright."
-    },
-    {
-        id: "flamingo",
-        name: "Flamingo Rubber Duck",
-        src: "./img/flamingo-duck.jpg",
-        price: "£7.00",
-        rating: 4.3,
-        about: "Don’t duck from this LED colour-changing flamingo."
     },
     {
         id: "birthday",
