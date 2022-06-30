@@ -56,17 +56,20 @@
         </section>
 
         <div class="container">
-            <button id="lowToHigh" class="sort-btn">Price: Low to High</button>
-            <button id="highToLow" class="sort-btn">Price: High to Low</button>
-            <label for="duckSearch"
-                >Search:
-                <input
-                    type="search"
-                    name="duckSearch"
-                    id="duckSearch"
-                    placeholder="e.g. Gandalf Rubber Duck"
-                />
-            </label>
+            <div id="filterContainer">
+                <button id="lowToHigh" class="sort-btn">Price: Low to High</button>
+                <button id="highToLow" class="sort-btn">Price: High to Low</button>
+                <label for="duckSearch"
+                    >Search:
+                    <input
+                        type="search"
+                        name="duckSearch"
+                        id="duckSearch"
+                        placeholder="e.g. Gandalf Rubber Duck"
+                    />
+                </label>
+            </div>
+
             <div class="products" id="products">
                 <!-- This is where the products will be displayed -->
             </div>

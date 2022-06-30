@@ -1,8 +1,10 @@
 const products = document.getElementById("products")
 const lowToHigh = document.getElementById("lowToHigh")
 const highToLow = document.getElementById("highToLow")
+const filterContainer = document.getElementById("filterContainer")
 
 const renderProducts = (productList) => {
+    filterContainer.style.display = "block"
     products.innerHTML = ""
     productList.map((product) => {
         const card = document.createElement("div")
@@ -27,6 +29,7 @@ const renderProducts = (productList) => {
 renderProducts(data)
 
 const renderSingleProduct = (product) => {
+    filterContainer.style.display = "none"
     products.innerHTML = ""
     const card = document.createElement("div")
     const star = "⭐"
