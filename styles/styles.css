@@ -103,7 +103,7 @@ body {
     background-color: var(--clr-accent);
     color: var(--clr-secondary);
     width: 15rem;
-    height: 21rem;
+    height: 23rem;
     border: 3px solid var(--clr-accent);
     border-radius: 3px;
     cursor: pointer;
