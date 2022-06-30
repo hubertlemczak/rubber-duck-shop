@@ -8,6 +8,7 @@ const renderProducts = (productList) => {
         const card = document.createElement("div")
         card.classList.add("card")
         const star = "⭐"
+
         card.innerHTML = `
                 <div class="card__img">
                     <img src=${product.src} alt=${product.name} />
@@ -15,12 +16,46 @@ const renderProducts = (productList) => {
                 <h3>${product.name}</h3>
                 <p>${star.repeat(product.rating)}</p>
                 <p>${product.price}</p>
-        `
+        `;
+
         products.appendChild(card)
+
+        card.addEventListener("click", () => renderSingleProduct(product))
     })
 }
 
 renderProducts(data)
+
+const renderSingleProduct = (product) => {
+    products.innerHTML = ""
+    const card = document.createElement("div")
+    const star = "⭐"
+
+    card.innerHTML = `
+        <div class="single-product">
+            <img src=${product.src} alt=${product.name} />
+            <div class="product-info">
+                <div>
+                    <h3>${product.name}</h3>
+                    <p>${star.repeat(product.rating)}</p>
+                    <p>${product.price}</p>
+                    <p class="about-product">${product.about}</p>
+                </div>
+                <div>
+                    <button id="addToBasket">Add to Basket</button>
+                    <button id="backToSearch">Back to Search</button>
+                </div>
+                
+            </div>
+    `;
+
+    products.appendChild(card)
+
+    const backToSearch = document.getElementById("backToSearch")
+
+    backToSearch.addEventListener("click", () => renderProducts(data))
+    
+}
 
 const sortByPrice = (highOrLow) => {
     const sortedByPrice = []
