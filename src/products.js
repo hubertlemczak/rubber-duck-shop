@@ -3,6 +3,7 @@ const lowToHigh = document.getElementById("lowToHigh")
 const highToLow = document.getElementById("highToLow")
 
 const renderProducts = (productList) => {
+    products.innerHTML = ""
     productList.map((product) => {
         const card = document.createElement("div")
         const star = "⭐"
@@ -19,17 +20,17 @@ const renderProducts = (productList) => {
 
 renderProducts(data)
 
+
 const sortByPrice = (highOrLow) => {
-    products.innerHTML = ""
     const sortedByPrice = []
 
-    data.map(duck => [+duck.price.slice(1), duck.id])
+    data.map((duck) => [+duck.price.slice(1), duck.id])
         .sort((a, b) => a[0] - b[0])
-        .map(priceDuck => {
-            data.map(dataDuck => {
+        .map((priceDuck) => {
+            data.map((dataDuck) => {
                 if (dataDuck.id === priceDuck[1]) sortedByPrice.push(dataDuck)
             })
-    })
+        })
 
     if (highOrLow === "low") renderProducts(sortedByPrice)
     if (highOrLow === "high") renderProducts(sortedByPrice.reverse())

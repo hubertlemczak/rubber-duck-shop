@@ -89,6 +89,12 @@ body {
 
 #duckSearch {
     width: 300px;
+    padding-left: 10px;
+    height: 2rem;
+}
+
+#duckSearch[placeholder] {
+    font-size: 0.8rem;
 }
 
 .products {
@@ -123,7 +129,7 @@ body {
     border-radius: 3px;
 }
 
-.sort-btn{
+.sort-btn {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
