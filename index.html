@@ -8,10 +8,10 @@
         <script src="./src/index.js" defer></script>
         <script src="./src/data.js" defer></script>
         <script src="./src/products.js" defer></script>
+        <script defer src="./src/dark-mode.js"></script>
         <title>Quick Quack</title>
     </head>
     <body>
-
         <header class="header">
             <div class="container">
                 <nav class="header__nav">
@@ -22,17 +22,22 @@
                                 <label for="duckSearch">Search:</label>
                                 <input type="search" name="duckSearch" id="duckSearch" />
                             </li>
+                            <li class="nav__list-item"><a href="">Products</a></li>
                             <li class="nav__list-item"><a href="">Sign In</a></li>
                             <li class="nav__list-item"><a href="">Basket</a></li>
+                            <li class="nav__list-item">
+                                <button class="dark-mode-toggle-btn">Dark Mode</button>
+                            </li>
                         </ul>
                     </ul>
                 </nav>
             </div>
         </header>
-        
-        <div class="products" id="products">
-            <!-- This is where the products will be displayed -->
-        </div>
 
+        <div class="container">
+            <div class="products" id="products">
+                <!-- This is where the products will be displayed -->
+            </div>
+        </div>
     </body>
 </html>
