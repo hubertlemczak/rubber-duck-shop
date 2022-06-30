@@ -4,10 +4,12 @@ const sortBtn = document.getElementById("sortBtn")
 const renderProducts = (productList) => {
     productList.map((product) => {
         const card = document.createElement("div")
+        const star = "⭐"
         card.innerHTML = `
             <div class="card">
                 <img src=${product.src} alt=${product.name} />
                 <h3>${product.name}</h3>
+                <p>${star.repeat(product.rating)}</p>
                 <p>${product.price}</p>
         `
         products.appendChild(card)
