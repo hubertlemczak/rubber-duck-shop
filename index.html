@@ -9,7 +9,8 @@
         <script defer src="./src/basket/basket.js"></script>
         <script src="./src/products.js" defer></script>
         <script defer src="./src/header/dark-mode.js"></script>
-        <script defer src="./src/header/search-bar.js"></script>
+        <script defer src="./src/header/basket-btn.js"></script>
+        <script defer src="./src/search-bar.js"></script>
         <link rel="icon" href="./img/logo.jpg" />
         <title>Quick Quack</title>
     </head>
@@ -22,7 +23,7 @@
                         <ul class="nav__list">
                             <li class="nav__list-item">Products</li>
                             <li class="nav__list-item">Sign In</li>
-                            <li class="nav__list-item">Basket</li>
+                            <li class="nav__list-item nav__list-basket-btn">Basket</li>
                             <li class="nav__list-item">
                                 <button class="dark-mode-toggle-btn">Dark Mode</button>
                             </li>
@@ -32,7 +33,8 @@
             </div>
         </header>
 
-        <section class="basket">
+        <section class="basket hidden">
+            <div class="close-basket">X</div>
             <div class="basket__container">
                 <div class="basket__items">
                     <!-- <div class="basket__item">

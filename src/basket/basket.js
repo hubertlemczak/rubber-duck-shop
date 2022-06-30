@@ -35,3 +35,9 @@ const getTotal = () => {
     })
     return total.toFixed(2)
 }
+
+const closeBasket = document.querySelector(".close-basket")
+closeBasket.addEventListener("click", () => {
+    const basket = document.querySelector(".basket")
+    basket.classList.add("hidden")
+})

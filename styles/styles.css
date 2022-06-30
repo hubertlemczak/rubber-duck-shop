@@ -55,6 +55,10 @@ h6 {
     --clr-accent: #fceb44;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     max-width: 66rem;
     margin: 0 auto;
@@ -112,6 +116,13 @@ label {
     bottom: 0;
     width: 400px;
     background-color: var(--clr-accent);
+}
+
+.close-basket {
+    font-size: 2rem;
+    margin: 20px 20px 0 0;
+    text-align: end;
+    cursor: pointer;
 }
 
 .basket__container {
