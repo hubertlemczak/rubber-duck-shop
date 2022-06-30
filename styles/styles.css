@@ -62,9 +62,14 @@ h6 {
 
 body {
     background-color: var(--clr-primary);
+    padding-top: 100px;
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding-block: 20px;
     background-color: var(--clr-primary);
 }
@@ -79,12 +84,15 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
+    color: var(--clr-secondary);
 }
 
-.nav__list-item a,
 .nav__list-item {
+    cursor: pointer;
+}
+
+label {
     color: var(--clr-secondary);
-    text-decoration: none;
 }
 
 #duckSearch {
@@ -97,6 +105,31 @@ body {
     font-size: 0.8rem;
 }
 
+.basket {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    background-color: var(--clr-accent);
+}
+
+.basket__container {
+    margin: auto;
+    margin-top: 18px;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    height: 100px;
+    padding: 15px;
+}
+
+.basket__item-img {
+    padding-right: 15px;
+    border-right: 1px solid black;
+    width: 50px;
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -107,7 +140,7 @@ body {
 .card {
     padding: 1rem;
     background-color: white;
-    color: var(--clr-secondary);
+    color: black;
     width: 15rem;
     height: 23rem;
     border: 3px solid var(--clr-accent);
@@ -127,9 +160,7 @@ body {
 }
 
 .card img {
-    /* width: 100%; */
     height: 200px;
-    /* object-fit: cover; */
     margin-bottom: 1rem;
     border-radius: 3px;
 }
@@ -139,7 +170,7 @@ body {
     cursor: pointer;
 }
 
-.single-product{
+.single-product {
     background-color: var(--clr-accent);
     color: var(--clr-secondary);
     display: flex;
@@ -152,7 +183,7 @@ body {
     object-fit: cover;
 }
 
-.product-info{
+.product-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -166,7 +197,7 @@ body {
     font-size: 1.5rem;
 }
 
-.about-product{
+.about-product {
     font-size: 1rem;
 }
 
@@ -178,13 +209,9 @@ body {
 
 .product-info > div:last-child button {
     background-color: var(--clr-secondary);
-    color: #F5F5F5;
+    color: #f5f5f5;
     padding: 0.25rem 1.25rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 }
-
-
-
-

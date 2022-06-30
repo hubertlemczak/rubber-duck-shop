@@ -16,7 +16,7 @@ const renderProducts = (productList) => {
                 <h3>${product.name}</h3>
                 <p>${star.repeat(product.rating)}</p>
                 <p>${product.price}</p>
-        `;
+        `
 
         products.appendChild(card)
 
@@ -47,14 +47,13 @@ const renderSingleProduct = (product) => {
                 </div>
                 
             </div>
-    `;
+    `
 
     products.appendChild(card)
 
     const backToSearch = document.getElementById("backToSearch")
 
     backToSearch.addEventListener("click", () => renderProducts(data))
-    
 }
 
 const sortByPrice = (highOrLow) => {

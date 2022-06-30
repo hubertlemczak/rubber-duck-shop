@@ -18,20 +18,11 @@
             <div class="container">
                 <nav class="header__nav">
                     <ul class="nav__list">
-                        <li class="nav__list-item header__logo"><a href="">🦆QuickQuack</a></li>
+                        <li class="nav__list-item header__logo">🦆QuickQuack</li>
                         <ul class="nav__list">
-                            <li class="nav__list-item">
-                                <label for="duckSearch">Search:</label>
-                                <input
-                                    type="search"
-                                    name="duckSearch"
-                                    id="duckSearch"
-                                    placeholder="e.g. Gandalf Rubber Duck"
-                                />
-                            </li>
-                            <li class="nav__list-item"><a href="">Products</a></li>
-                            <li class="nav__list-item"><a href="">Sign In</a></li>
-                            <li class="nav__list-item"><a href="">Basket</a></li>
+                            <li class="nav__list-item">Products</li>
+                            <li class="nav__list-item">Sign In</li>
+                            <li class="nav__list-item">Basket</li>
                             <li class="nav__list-item">
                                 <button class="dark-mode-toggle-btn">Dark Mode</button>
                             </li>
@@ -41,9 +32,30 @@
             </div>
         </header>
 
+        <section class="basket">
+            <div class="basket__container">
+                <div class="basket__items">
+                    <div class="basket__item">
+                        <div class="basket__item-img">
+                            <img src="./img/lizzie-duck.jpg" alt="lizzie-duck" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
             <button id="lowToHigh" class="sort-btn">Price: Low to High</button>
             <button id="highToLow" class="sort-btn">Price: High to Low</button>
+            <label for="duckSearch"
+                >Search:
+                <input
+                    type="search"
+                    name="duckSearch"
+                    id="duckSearch"
+                    placeholder="e.g. Gandalf Rubber Duck"
+                />
+            </label>
             <div class="products" id="products">
                 <!-- This is where the products will be displayed -->
             </div>
