@@ -1,5 +1,6 @@
 const products = document.getElementById("products")
-const sortBtn = document.getElementById("sortBtn")
+const lowToHigh = document.getElementById("lowToHigh")
+const highToLow = document.getElementById("highToLow")
 
 const renderProducts = (productList) => {
     products.innerHTML = ""
@@ -19,7 +20,8 @@ const renderProducts = (productList) => {
 
 renderProducts(data)
 
-const sortByPrice = () => {
+
+const sortByPrice = (highOrLow) => {
     const sortedByPrice = []
 
     data.map((duck) => [+duck.price.slice(1), duck.id])
@@ -30,7 +32,9 @@ const sortByPrice = () => {
             })
         })
 
-    renderProducts(sortedByPrice)
+    if (highOrLow === "low") renderProducts(sortedByPrice)
+    if (highOrLow === "high") renderProducts(sortedByPrice.reverse())
 }
 
-sortBtn.addEventListener("click", () => sortByPrice())
+lowToHigh.addEventListener("click", () => sortByPrice("low"))
+highToLow.addEventListener("click", () => sortByPrice("high"))
