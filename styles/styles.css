@@ -120,14 +120,42 @@ label {
     background-color: white;
     width: 90%;
     border-radius: 10px;
-    height: 100px;
     padding: 15px;
+}
+.basket__items {
+    width: 100%;
+}
+
+.basket__item {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 .basket__item-img {
+    display: flex;
+    align-items: center;
     padding-right: 15px;
     border-right: 1px solid black;
     width: 50px;
+}
+
+.basket__item-text {
+    max-width: 150px;
+    padding-right: 15px;
+    border-right: 1px solid black;
+}
+
+.basket__item-quantity {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.basket__total {
+    display: flex;
+    justify-content: space-between;
 }
 
 .products {
