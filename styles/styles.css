@@ -122,3 +122,8 @@ body {
     margin-bottom: 1rem;
     border-radius: 3px;
 }
+
+.sort-btn{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
