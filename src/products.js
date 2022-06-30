@@ -52,8 +52,13 @@ const renderSingleProduct = (product) => {
     products.appendChild(card)
 
     const backToSearch = document.getElementById("backToSearch")
-
+    const addToBasketBtn = document.getElementById("addToBasket")
+    console.log(addToBasketBtn)
     backToSearch.addEventListener("click", () => renderProducts(data))
+    addToBasketBtn.addEventListener("click", () => {
+        const item = { ...product }
+        addToBasket(item)
+    })
 }
 
 const sortByPrice = (highOrLow) => {
@@ -73,3 +78,22 @@ const sortByPrice = (highOrLow) => {
 
 lowToHigh.addEventListener("click", () => sortByPrice("low"))
 highToLow.addEventListener("click", () => sortByPrice("high"))
+
+const addToBasket = (item) => {
+    if (!isInCart(item)) {
+        item.quantity = 1
+        cart.push(item)
+    }
+    renderBasket()
+}
+
+const isInCart = (item) => {
+    let result = false
+    cart.forEach((product) => {
+        if (product.name === item.name) {
+            product.quantity++
+            result = true
+        }
+    })
+    return result
+}
