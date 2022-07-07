@@ -5,10 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles/styles.css" />
-        <script src="./src/index.js" defer></script>
         <script src="./src/data.js" defer></script>
+        <script defer src="./src/basket/basket.js"></script>
         <script src="./src/products.js" defer></script>
         <script defer src="./src/header/dark-mode.js"></script>
+        <script defer src="./src/header/basket-btn.js"></script>
+        <script defer src="./src/search-bar.js"></script>
+        <link rel="icon" href="./img/logo.jpg" />
         <script defer src="./src/header/search-bar.js"></script>
         <link rel="icon" href="./img/logo.png" />
         <title>Quick Quack</title>
@@ -18,20 +21,11 @@
             <div class="container">
                 <nav class="header__nav">
                     <ul class="nav__list">
-                        <li class="nav__list-item header__logo"><a href="">🦆QuickQuack</a></li>
+                        <li class="nav__list-item header__logo">🦆QuickQuack</li>
                         <ul class="nav__list">
-                            <li class="nav__list-item">
-                                <label for="duckSearch">Search:</label>
-                                <input
-                                    type="search"
-                                    name="duckSearch"
-                                    id="duckSearch"
-                                    placeholder="e.g. Gandalf Rubber Duck"
-                                />
-                            </li>
-                            <li class="nav__list-item"><a href="">Products</a></li>
-                            <li class="nav__list-item"><a href="">Sign In</a></li>
-                            <li class="nav__list-item"><a href="">Basket</a></li>
+                            <li class="nav__list-item">Products</li>
+                            <li class="nav__list-item">Sign In</li>
+                            <li class="nav__list-item nav__list-basket-btn">Basket</li>
                             <li class="nav__list-item">
                                 <button class="dark-mode-toggle-btn">Dark Mode</button>
                             </li>
@@ -41,11 +35,45 @@
             </div>
         </header>
 
+        <section class="basket hidden">
+            <div class="close-basket">X</div>
+            <div class="basket__container">
+                <div class="basket__items">
+                    <!-- <div class="basket__item">
+                        <div class="basket__item-img">
+                            <img src="./img/lizzie-duck.jpg" alt="lizzie-duck" />
+                        </div>
+                        <div class="basket__item-text">
+                            <p>Queen ELizabeth Rubber Duck</p>
+                            <p>£8.99</p>
+                        </div>
+                        <div class="basket__item-quantity">
+                            <p>3</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="basket__total">
+                    <p>Total:</p>
+                    <p class="basket__total-value">£0.00</p>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
             <div id="filterContainer">
                 <button id="lowToHigh" class="sort-btn">Price: Low to High</button>
                 <button id="highToLow" class="sort-btn">Price: High to Low</button>
+                <label for="duckSearch"
+                    >Search:
+                    <input
+                        type="search"
+                        name="duckSearch"
+                        id="duckSearch"
+                        placeholder="e.g. Gandalf Rubber Duck"
+                    />
+                </label>
             </div>
+
             <div class="products" id="products">
                 <!-- This is where the products will be displayed -->
             </div>
