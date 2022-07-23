@@ -40,4 +40,5 @@ const closeBasket = document.querySelector(".close-basket")
 closeBasket.addEventListener("click", () => {
     const basket = document.querySelector(".basket")
     basket.classList.add("hidden")
+    basketBtnIsClicked = false
 })

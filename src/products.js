@@ -2,6 +2,7 @@ const products = document.getElementById("products")
 const lowToHigh = document.getElementById("lowToHigh")
 const highToLow = document.getElementById("highToLow")
 const filterContainer = document.getElementById("filterContainer")
+const homePage = document.getElementById("homePage")
 
 const renderProducts = (productList) => {
     filterContainer.style.display = "block"
@@ -45,7 +46,7 @@ const renderSingleProduct = (product) => {
                     <p class="about-product">${product.about}</p>
                 </div>
                 <div>
-                    <button id="addToBasket">Add to Basket</button>
+                    <button id="addToBasket" onclick="displayBasket()">Add to Basket</button>
                     <button id="backToSearch">Back to Search</button>
                 </div>
                 
@@ -99,4 +100,13 @@ const isInCart = (item) => {
         }
     })
     return result
+}
+
+homePage.addEventListener("click", () => location.reload())
+
+let basketBtnIsClicked = false
+
+const displayBasket = () => {
+    if (!basketBtnIsClicked) basket.classList.toggle("hidden")
+    basketBtnIsClicked = true
 }

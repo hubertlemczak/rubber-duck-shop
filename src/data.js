@@ -5,7 +5,7 @@ const data = [
         src: "./img/boolean-duck.jpg",
         price: "£15.99",
         rating: 5,
-        about: "Your classic debugging companion."
+        about: "Your classic debugging companion. Free for all Boolean coding camp students."
     },
     {
         id: "skyrim",
